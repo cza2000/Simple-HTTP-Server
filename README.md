@@ -1,6 +1,7 @@
 # Simple-HTTP-Server
 一个基于线程池技术的简单Web服务器
 
-我先写了一个简单的线程池，有execute，shutdown，addWorker，removeWorker方法。
+先写了一个简单的线程池，实现了execute，shutdown，addWorker，removeWorker方法。
+线程池维护两个链表分别存放任务和工作者线程。
 使用这个线程池构造了一个简单的Web服务器，用于处理HTTP请求，目前只能处理简单的文本和JPG图片。
 该服务器使用main线程不断接受客户端Socket的连接，封装成HttpRequestHandler交线程池处理。
